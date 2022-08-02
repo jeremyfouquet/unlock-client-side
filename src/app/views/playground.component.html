@@ -1,0 +1,12 @@
+<app-connection
+*ngIf="!room.startGame"
+[playerId]="playerId"
+[chrono]="room.chrono"
+[team]="team"
+></app-connection>
+<app-room
+*ngIf="room.startGame"
+[team]="team"
+[room]="room"
+[playerId]="playerId"
+></app-room>

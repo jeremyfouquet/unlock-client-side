@@ -1,0 +1,81 @@
+@import 'src/styles.scss';
+p, h3 {
+    margin: 0;
+}
+.carte-titre {
+    &.bc-red {
+        background-color: $red;
+    }
+    &.bc-blue {
+        background-color: $darkblue;
+    }
+    &.bc-white {
+        background-color: $white;
+    }
+    .mat-icon {
+        position: absolute;
+        top: 0.1rem;
+        right: 0.1rem;
+        cursor: pointer;
+    }
+}
+.card{
+    transform-style: preserve-3d;
+    height: 386px;
+    border: 0.1rem solid $grey;
+    margin: 2px;
+    position: relative;
+    transition: transform 1s;
+    // transition-delay: 0.5s;
+}
+.face{
+    background-color: $lightgrey;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden;
+}
+.recto{
+    z-index: 0;
+    img{
+        margin: auto;
+    }
+    // .img{
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     height: 100%;
+    // }
+
+}
+.verso{
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.retourne{
+    transform: rotateY(180deg);
+}
+
+#desactiveInput {
+    height: 40px;
+    width: 285px;
+    z-index: 1;
+    float: right;
+    position: absolute;
+}
+
+#clavier {
+    background-color: $white;
+    border-radius: 5px;
+    padding: 0.5rem;
+    .touch {
+        color: $white;
+        background-color: $grey;
+        border-radius: 10px;
+        border: 2px double $lightgrey;
+        width: 30%;
+        margin-bottom: 0.2rem;
+        cursor: pointer;
+    }
+}

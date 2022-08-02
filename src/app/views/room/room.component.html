@@ -1,0 +1,61 @@
+<div id="room-section" class="row-container">
+  <div
+  id="left"
+  class="d-flex justify-content-center align-items-center flex-wrap col-lg-10 col-9">
+    <div *ngIf="room.game.ended; else elseClue">
+      <p *ngIf="room.game.chrono > 0; else elseLoose">Bravo vous avez réussi à sortir en {{room.game.chrono| getChrono}} minutes !</p>
+      <ng-template #elseLoose>
+        <p>Domage ! Le temps est écoulé !</p>
+      </ng-template>
+    </div>
+    <ng-template
+    #elseClue>
+      <ng-container *ngFor="let clue of room.game.clues">
+        <app-clue
+        [clue]="clue"
+        [codeForm]="codeForm"
+        [codePlaceholder]="codePlaceholder"
+        (error)="errorClue($event)"
+        (combinaison)="addClue($event)"
+        (rechercheCode)="searchCode()"></app-clue>
+      </ng-container>
+    </ng-template>
+  </div>
+
+  <div
+  id="right"
+  class="text-center col-lg-2 col-3">
+    <!-- <div>{{room.game.name}}</div> -->
+    <h3 class="title">Temps</h3>
+    <h3 class="title">{{room.game.chrono | getChrono}}</h3>
+    <form id="clueForm" [formGroup]="clueForm" (ngSubmit)="searchClue()">
+      <h3 for="clue" class="title">Recherche d'indice</h3>
+      <input type="number" id="clue" class="form-control" placeholder="Entrez un numéro" formControlName="clue">
+    </form>
+    <form id="chatForm" [formGroup]="chatForm" (ngSubmit)="sendMessage()">
+      <h3 class="title">Equipe</h3>
+      <div
+      class="team">
+        <app-player *ngFor="let player of team" [player]="player"></app-player>
+      </div>
+      <div
+      id="chat-container">
+        <h3 class="title">Chat</h3>
+        <div
+        id="chat">
+          <div
+          *ngFor="let note of room.notes | arraySort"
+          class="d-flex justify-content-start text-justify m-2">
+            <div class="d-flex flex-column">
+              <img [src]="'assets/avatar/'+note.avatar" alt="Avatar">
+              <!-- <span>{{note.date | date:'shortTime'}}</span> -->
+            </div>
+            <p class=" m-0">{{note.message}}</p>
+          </div>
+        </div>
+      </div>
+      <input type="text" id="message" class="form-control" placeholder="Entrez votre message ..." formControlName="message">
+    </form>
+  </div>
+
+</div>
