@@ -9,7 +9,7 @@ style="width: 18rem; "
     <div class="face recto">
         <div [ngClass]="'carte-titre'" [className]="clue.type === Type.combinable ? redOrBlue(clue) : 'bc-white'">
             <h3 >{{clue.name}} {{clue.id}}</h3>
-            <img src="" alt="return" (click)="retourne = !retourne">
+            <span (click)="retourne = !retourne">🔁</span>
             <!-- <mat-icon (click)="retourne = !retourne" >cached</mat-icon> -->
         </div>
         <img class="card-img-top" [src]="'assets/'+clue.img" alt="Card image cap">
@@ -18,7 +18,7 @@ style="width: 18rem; "
     <div class="face verso">
         <div [ngClass]="'carte-titre'" [className]="clue.type === Type.combinable ? redOrBlue(clue) : 'bc-white'">
             <h3>{{clue.name}} {{clue.id}}</h3>
-            <img src="" alt="return" (click)="retourne = !retourne">
+            <span (click)="retourne = !retourne">🔁</span>
             <!-- <mat-icon (click)="retourne = !retourne">cached</mat-icon> -->
         </div>
         <div *ngIf="!activer; else elseBlock" class="card-body">
