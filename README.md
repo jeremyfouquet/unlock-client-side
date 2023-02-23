@@ -1,6 +1,16 @@
-# UnlockClient
+# unlock (client angular)
 
+## Angular version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+
+## Node version
+This project use node v16.15.1
+
+## Npm version
+This project use npm v8.11.0 
+
+## Requirement
+NodeJs supported by angular 14 is ^14.15.0 || ^16.10.0
 
 ## Development server
 
