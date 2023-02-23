@@ -14,7 +14,7 @@ NodeJs supported by angular 14 is ^14.15.0 || ^16.10.0
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. Launch Server side application before to run it.
 
 ## Code scaffolding
 
