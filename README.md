@@ -4,8 +4,8 @@
 Interface client angular pour une application d'escape game
 
 ## See project on production
-
-[unlock client side](https://root-carnelian-sneezeweed.glitch.me/) (https://root-carnelian-sneezeweed.glitch.me/)
+Pour un appercu de l'interface (la connection au server n'est pas active) suivre le lien ci-dessous
+[unlock client side](https://jeremyfouquet.github.io/unlock-client-side/) (https://jeremyfouquet.github.io/unlock-client-side/)
 
 ## Angular version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
