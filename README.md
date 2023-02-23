@@ -1,4 +1,7 @@
-# unlock (client angular)
+# unlock client side (pour l'application full stack angular + nodeJs)
+
+## Description
+Interface client angular pour une application d'escape game
 
 ## Angular version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
@@ -13,8 +16,8 @@ This project use npm v8.11.0
 NodeJs supported by angular 14 is ^14.15.0 || ^16.10.0
 
 ## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. Launch Server side application before to run it.
+Launch Server side application nodeJs before to run it.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
