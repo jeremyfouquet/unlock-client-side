@@ -4,7 +4,7 @@
 Interface client angular pour une application d'escape game
 
 ## See project on production
-Pour un appercu de l'interface (la connection au server n'est pas active) suivre le lien ci-dessous
+Pour un appercu de l'interface (la connection au server n'est pas active) suivre le lien ci-joint
 [unlock client side](https://jeremyfouquet.github.io/unlock-client-side/) (https://jeremyfouquet.github.io/unlock-client-side/)
 
 ## Angular version
